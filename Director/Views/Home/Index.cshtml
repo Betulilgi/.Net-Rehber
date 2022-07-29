@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <h2>Rehberim</h2>
+    <script src="~/Scripts/CRUD/Crud.js"></script>
+    <form>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="name">Ad</label>
+
+                <input type="text" class="form-control" id="id" style="display:none">
+
+                <input type="text" class="form-control" id="name" placeholder="Ad">
+            </div>
+            <div class="form-group">
+                <label for="lName">Soyad</label>
+                <input type="text" class="form-control" id="lName" placeholder="Soyad">
+            </div>
+            <div class="form-group">
+                <label for="pNumber">Telefon Numarası</label>
+                <input type="text" class="form-control" id="pNumber" placeholder="Telefon Numarası">
+            </div>
+            <div class="form-group">
+                <label for="tc">T.C.No</label>
+                <input type="text" class="form-control" id="tc" placeholder="T.C.No" maxlength="11" >
+            </div>
+        </div>
+
+        @*alanları kaydetmek için javascript 'onclick' fonksiyonu oluştururuz.*@
+
+        <button type="button" id="Btn" class="btn btn-default" onclick="fnInsert()" style="margin-bottom:50px"> Kaydet </button>
+        <button type="submit" id="update" class="btn btn-default" onclick="fnUpdate()" style="margin-bottom:50px"> Güncelle </button>
+
+    </form>
+
+    <script src="~/Scripts/CRUD/Crud.js"></script>
+
+    <table id="ViewValues" class="table table-bordered" style="margin-bottom:30px"></table>
+</div>
